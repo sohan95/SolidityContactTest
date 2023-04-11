@@ -1,0 +1,24 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()" novalidate autocomplete="off">
+    <div class="container">
+        <div class="transfer-container">
+            <div>
+                Address: {{user.address}} <br/> 
+                Balance: {{user.balance}} Eth
+            </div>
+            <mat-form-field>
+                <input matInput placeholder="Transfer Address" name="transferAddress" formControlName="transferAddress"
+                maxlength="42" minlength="42" required> 
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput placeholder="Amount" name="amount" formControlName="amount" required> 
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput placeholder="Remarks" name="remarks" formControlName="remarks" maxlength="42" required> 
+            </mat-form-field>
+            <div style="width: 100px">
+                <button type="submit">Transfer Ether</button> 
+            </div>
+        </div> 
+    </div>
+</form>
+
